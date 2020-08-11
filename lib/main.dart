@@ -21,13 +21,21 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: flag ? Colors.deepPurple : Colors.yellow,
-      floatingActionButton: FloatingActionButton(onPressed: buttonstate()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          return buttonstate();
+        },
+        backgroundColor: flag ? Colors.green : Colors.red,
+      ),
       body: Container(
-        child: Text('Hey there!!I am Sandhra',
-            style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontFamily: 'monospace',
-                color: flag ? Colors.yellow : Colors.blue)),
+        child: Center(
+          child: Text('Hey there!!I am Sandhra',
+              style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'monospace',
+                  color: flag ? Colors.yellow : Colors.blue)),
+        ),
       ),
     );
   }
