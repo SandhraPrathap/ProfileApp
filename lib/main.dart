@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Profile());
+  runApp(Blah());
 }
 
 class Profile extends StatefulWidget {
@@ -10,15 +10,19 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
+  buttonstate() {
+    flag = !flag;
+    setState(() {});
+  }
+
   bool flag = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        flag = !flag;
-      }),
+      backgroundColor: flag ? Colors.deepPurple : Colors.yellow,
+      floatingActionButton: FloatingActionButton(onPressed: buttonstate()),
       body: Container(
-        color: flag ? Colors.deepPurple : Colors.yellow,
         child: Text('Hey there!!I am Sandhra',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
