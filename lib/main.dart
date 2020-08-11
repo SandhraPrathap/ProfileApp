@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
 void main() {
   runApp(Blah());
@@ -25,7 +26,10 @@ class _ProfileState extends State<Profile> {
         onPressed: () {
           return buttonstate();
         },
-        backgroundColor: flag ? Colors.green : Colors.red,
+        backgroundColor: flag ? Colors.red : Colors.purple,
+        child: Icon(flag
+            ? MaterialCommunityIcons.weather_sunny
+            : MaterialCommunityIcons.moon_waning_crescent),
       ),
       body: Container(
         child: Center(
