@@ -21,11 +21,13 @@ class _ProfileState extends State<Profile> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: flag ? Colors.deepPurple : Colors.yellow,
-      floatingActionButton: FloatingActionButton(
+      floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
           return buttonstate();
         },
         backgroundColor: flag ? Colors.green : Colors.red,
+        label: Text("SWITCH"),
+        icon: Icon(Icons.cake),
       ),
       body: Container(
         child: Center(
