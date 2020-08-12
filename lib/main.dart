@@ -78,7 +78,7 @@ class _ProfileState extends State<Profile> {
                   "Hello",
                 ),
                 onPressed: () {
-                  print("Halo");
+                  Navigator.push(context, MaterialPageRoute(builder:context=>Blue() ));
                 },
               )
             ],
