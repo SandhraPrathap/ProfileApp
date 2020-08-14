@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:profile/contact.dart';
 
 void main() {
   runApp(Blah());
@@ -78,7 +79,12 @@ class _ProfileState extends State<Profile> {
                   "Hello",
                 ),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder:context=>Blue() ));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ContactMe(),
+                    ),
+                  );
                 },
               )
             ],
