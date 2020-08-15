@@ -18,7 +18,6 @@ class _ProfileState extends State<Profile> {
   }
 
   bool flag = false;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

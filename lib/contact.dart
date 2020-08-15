@@ -7,20 +7,30 @@ class ContactMe extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("Contact Me"),
             Container(
-              child: Image.asset("image/dino.jpg"),
               margin: EdgeInsets.all(5),
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    offset: Offset(5, 0),
+                    color: Colors.yellow,
+                    blurRadius: 10,
+                  )
+                ],
+                image: DecorationImage(
+                  fit: BoxFit.fill,
+                  image: AssetImage("image/dino.jpg"),
+                ),
                 shape: BoxShape.circle,
                 border: Border.all(
                   color: Colors.green,
                 ),
               ),
-              height: 100,
-              width: 100,
+              height: 60,
+              width: 60,
             ),
           ],
         ),
